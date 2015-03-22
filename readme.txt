@@ -1,4 +1,4 @@
-# PsScriptParaIncluirZone
+PsScriptParaIncluirZone
 
-## Powershell script para incluir zone
+  Powershell script para incluir zone
 
