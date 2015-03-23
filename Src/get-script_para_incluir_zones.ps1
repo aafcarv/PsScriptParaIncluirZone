@@ -77,7 +77,7 @@ function Get-ScriptParaIncluirZones {
 function Get-Zoneset ([string[]] $initiators, [string[]] $targets, [string] $hostname) {
 
     $zones = (@())
-    $alias = Get-Alias $initiators
+    $alias = Get-AliasInit $initiators
 
     foreach($target in $targets) {
 
@@ -90,7 +90,7 @@ function Get-Zoneset ([string[]] $initiators, [string[]] $targets, [string] $hos
     return @{"Zones"=$zones;"Initiators"=$initiators}
 }
 
-function Get-Alias([string[]] $initiators) {
+function Get-AliasInit ([string[]] $initiators) {
 
     $alias = [string]::Empty
     $isDirty = $false
