@@ -37,7 +37,7 @@ Write-Output "!"; Write-Output "!" >> (Join-Path $currentPath teste.txt)
 $script.Zoneset  = "ZONESET002"
 $script.Vsan = "102"
 $script.Hostname = "SERVER002"
-$script.ClearWwpns()
+$script.ClearPwwns()
 
 $initiators = @"
 c0:00:00:00:00:00:00:01

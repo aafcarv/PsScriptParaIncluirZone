@@ -2,8 +2,9 @@
 
 $o = Get-ScriptParaIncluirZones
 
-$o.Vsan = "2"
 $o.Hostname = "SERVER01"
+$o.Vsan = "2"
+$o.Zoneset = "ZONESET01"
 
 $init = "00:00:00:00:01"
 $tars = @"
