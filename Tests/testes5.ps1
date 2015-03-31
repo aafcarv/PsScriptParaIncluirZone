@@ -18,7 +18,7 @@ b0:00:00:00:00:00:00:02;STORAGE03
 "@
 
 $script.SetInitiator($initiators)
-$script.SetTarget($targets)
+$script.SetTargets($targets)
 
 $initiators = "a0:00:00:00:00:00:00:02"
 
@@ -28,11 +28,11 @@ b0:00:00:00:00:00:00:04;STORAGE04
 "@
 
 $script.SetInitiator($initiators)
-$script.SetTarget($targets)
+$script.SetTargets($targets)
 
-$script.WriteZones() > (Join-Path $currentPath teste.txt)
+$script.RemoveZones() > (Join-Path $currentPath teste-remover.txt)
 
-Write-Output "!"; Write-Output "!" >> (Join-Path $currentPath teste.txt)
+Write-Output "!"; Write-Output "!" >> (Join-Path $currentPath teste-remover.txt)
 
 $script.Zoneset  = "ZONESET002"
 $script.Vsan = "102"
@@ -44,14 +44,14 @@ c0:00:00:00:00:00:00:01
 c0:00:00:00:00:00:00:02
 "@
 
-$targets = Get-Content .\tape.txt
+$targets = Get-Content (Join-Path $currentPath tapes.txt)
 
 $script.SetInitiator($initiators)
-$script.SetTarget($targets)
+$script.SetTargets($targets)
 
-Write-Output "!"; Write-Output "!" >> (Join-Path $currentPath teste.txt)
+Write-Output "!"; Write-Output "!" >> (Join-Path $currentPath teste-remover.txt)
 
-$script.WriteZones() >> (Join-Path $currentPath teste.txt)
+$script.RemoveZones() >> (Join-Path $currentPath teste-remover.txt)
 
-Get-Content (Join-Path $currentPath teste.txt)
+Get-Content (Join-Path $currentPath teste-remover.txt)
 

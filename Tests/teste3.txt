@@ -1,0 +1,192 @@
+﻿!
+zoneset clone ZONESET001 Backup_ZONESET001 vsan 101
+!
+zone commit vsan 101
+!
+!
+! 1 Remove os zones membros do zoneset
+!
+zoneset name ZONESET001 vsan 101
+no member Z_SERVER001_0001_0002_TAPE01
+no member Z_SERVER001_0001_0002_TAPE02
+no member Z_SERVER001_0001_0002_TAPE03
+!
+! 2 Remove os membros de cada zone
+!
+zone name Z_SERVER001_0001_0002_TAPE01 vsan 101
+no member pwwn a0:00:00:00:00:00:00:01
+no member pwwn a0:00:00:00:00:00:00:02
+no member pwwn b0:00:00:00:00:00:01:01
+!
+zone name Z_SERVER001_0001_0002_TAPE02 vsan 101
+no member pwwn a0:00:00:00:00:00:00:01
+no member pwwn a0:00:00:00:00:00:00:02
+no member pwwn b0:00:00:00:00:00:01:02
+!
+zone name Z_SERVER001_0001_0002_TAPE03 vsan 101
+no member pwwn a0:00:00:00:00:00:00:01
+no member pwwn a0:00:00:00:00:00:00:02
+no member pwwn b0:00:00:00:00:00:01:03
+!
+! 3 Remove os zones
+!
+zoneset name ZONESET001 vsan 101
+no zone name Z_SERVER001_0001_0002_TAPE01 vsan 101
+no zone name Z_SERVER001_0001_0002_TAPE02 vsan 101
+no zone name Z_SERVER001_0001_0002_TAPE03 vsan 101
+!
+zoneset activate name ZONESET001 vsan 101
+!
+zone commit vsan 101
+!
+!
+zoneset clone ZONESET002 Backup_ZONESET002 vsan 102
+!
+zone commit vsan 102
+!
+!
+! 1 Remove os zones membros do zoneset
+!
+zoneset name ZONESET002 vsan 102
+no member Z_SERVER002_0001_0002_0003_0004_TAPE01
+no member Z_SERVER002_0001_0002_0003_0004_TAPE02
+no member Z_SERVER002_0001_0002_0003_0004_TAPE03
+no member Z_SERVER002_0001_0002_0003_0004_TAPE04
+no member Z_SERVER002_0001_0002_0003_0004_TAPE05
+no member Z_SERVER002_0001_0002_0003_0004_TAPE06
+no member Z_SERVER002_0001_0002_0003_0004_TAPE07
+no member Z_SERVER002_0001_0002_0003_0004_TAPE08
+no member Z_SERVER002_0001_0002_0003_0004_TAPE09
+no member Z_SERVER002_0001_0002_0003_0004_TAPE10
+!
+! 2 Remove os membros de cada zone
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE01 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:01
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE02 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:02
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE03 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:03
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE04 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:04
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE05 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:05
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE06 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:06
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE07 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:07
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE08 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:08
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE09 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:09
+!
+zone name Z_SERVER002_0001_0002_0003_0004_TAPE10 vsan 102
+no member pwwn c0:00:00:00:00:00:00:01
+no member pwwn c0:00:00:00:00:00:00:02
+no member pwwn c0:00:00:00:00:00:00:03
+no member pwwn c0:00:00:00:00:00:00:04
+no member pwwn d0:00:00:00:00:00:01:10
+!
+! 3 Remove os zones
+!
+zoneset name ZONESET002 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE01 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE02 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE03 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE04 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE05 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE06 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE07 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE08 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE09 vsan 102
+no zone name Z_SERVER002_0001_0002_0003_0004_TAPE10 vsan 102
+!
+zoneset activate name ZONESET002 vsan 102
+!
+zone commit vsan 102
+!
+!
+zoneset clone ZONESET003 Backup_ZONESET003 vsan 103
+!
+zone commit vsan 103
+!
+!
+! 1 Remove os zones membros do zoneset
+!
+zoneset name ZONESET003 vsan 103
+no member Z_SERVER003_0001_0002_TAPE_A
+no member Z_SERVER003_0001_0002_TAPE_B
+no member Z_SERVER003_0001_0002_TAPE_C
+!
+! 2 Remove os membros de cada zone
+!
+zone name Z_SERVER003_0001_0002_TAPE_A vsan 103
+no member pwwn e0:00:00:00:00:00:00:01
+no member pwwn e0:00:00:00:00:00:00:02
+no member pwwn f0:00:00:00:00:00:01:01
+!
+zone name Z_SERVER003_0001_0002_TAPE_B vsan 103
+no member pwwn e0:00:00:00:00:00:00:01
+no member pwwn e0:00:00:00:00:00:00:02
+no member pwwn f0:00:00:00:00:00:01:02
+!
+zone name Z_SERVER003_0001_0002_TAPE_C vsan 103
+no member pwwn e0:00:00:00:00:00:00:01
+no member pwwn e0:00:00:00:00:00:00:02
+no member pwwn f0:00:00:00:00:00:01:03
+!
+! 3 Remove os zones
+!
+zoneset name ZONESET003 vsan 103
+no zone name Z_SERVER003_0001_0002_TAPE_A vsan 103
+no zone name Z_SERVER003_0001_0002_TAPE_B vsan 103
+no zone name Z_SERVER003_0001_0002_TAPE_C vsan 103
+!
+zoneset activate name ZONESET003 vsan 103
+!
+zone commit vsan 103
+!
