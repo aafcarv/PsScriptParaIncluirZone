@@ -141,7 +141,7 @@ function Get-ScriptParaIncluirZones {
     $instance | Add-Member NoteProperty Hostname $([string]::Empty)
     $instance | Add-Member NoteProperty Zoneset $([string]::Empty)
     $instance | Add-Member ScriptMethod SetInitiator $setInitiator
-    $instance | Add-Member ScriptMethod SetTargets $setTarget
+    $instance | Add-Member ScriptMethod SetTarget $setTarget
     $instance | Add-Member ScriptMethod WriteZones $writeZones
     $instance | Add-Member ScriptMethod RemoveZones $removeZones
     $instance | Add-Member ScriptMethod ClearPwwns $clearPwwns

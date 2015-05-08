@@ -18,7 +18,7 @@ b0:00:00:00:00:00:00:02;STORAGE03
 "@
 
 $script.SetInitiator($initiators)
-$script.SetTargets($targets)
+$script.SetTarget($targets)
 
 $initiators = "a0:00:00:00:00:00:00:02"
 
@@ -28,7 +28,7 @@ b0:00:00:00:00:00:00:04;STORAGE04
 "@
 
 $script.SetInitiator($initiators)
-$script.SetTargets($targets)
+$script.SetTarget($targets)
 
 $script.RemoveZones() > (Join-Path $currentPath teste-remover.txt)
 
@@ -47,7 +47,7 @@ c0:00:00:00:00:00:00:02
 $targets = Get-Content (Join-Path $currentPath tapes.txt)
 
 $script.SetInitiator($initiators)
-$script.SetTargets($targets)
+$script.SetTarget($targets)
 
 Write-Output "!"; Write-Output "!" >> (Join-Path $currentPath teste-remover.txt)
 

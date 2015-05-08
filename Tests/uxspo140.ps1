@@ -21,7 +21,7 @@ b0:00:00:00:00:00:01:02;VSP1_1R
 "@
 
 $script.SetInitiator($initiators)
-$script.SetTargets($targets)
+$script.SetTarget($targets)
 
 $initiators = @"
 a0:00:00:00:00:00:00:03
@@ -34,7 +34,7 @@ b0:00:00:00:00:00:01:02;VSP1_2R
 "@
 
 $script.SetInitiator($initiators)
-$script.SetTargets($targets)
+$script.SetTarget($targets)
 
 $initiators = @"
 x0:00:00:05
@@ -43,27 +43,27 @@ x0:00:00:06
 $targets = "k0:00:00:01;VSP1_1M"
 
 $script.SetInitiator($initiators)
-$script.SetTargets($targets)
+$script.SetTarget($targets)
 
 $initiators = @"
 x0:00:00:07
 x0:00:00:08
 "@
 $script.SetInitiator($initiators)
-$script.SetTargets("k0:00:00:01;VSP1_1K")
+$script.SetTarget("k0:00:00:01;VSP1_1K")
 
 $script.SetInitiator(@"
 x0:00:00:09
 x0:00:00:10
 "@)
-$script.SetTargets("k0:00:00:01;VSP1_2M")
+$script.SetTarget("k0:00:00:01;VSP1_2M")
 
 $script.SetInitiator(@"
 x0:00:00:11
 x0:00:00:12
 "@)
 
-$script.SetTargets("k0:00:00:01;VSP1_2K")
+$script.SetTarget("k0:00:00:01;VSP1_2K")
 
 $script.RemoveZones() 
 

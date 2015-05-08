@@ -12,7 +12,7 @@ $tars = @"
 00:00:00:00:0b;STORAGE0b
 "@
 $o.SetInitiator($init)
-$o.SetTargets($tars)
+$o.SetTarget($tars)
 
 
 $init = @"
@@ -25,12 +25,12 @@ $tars = @"
 00:00:00:00:0e;STORAGE0e
 "@
 $o.SetInitiator($init)
-$o.SetTargets($tars)
+$o.SetTarget($tars)
 
 
 $init = "00:00:00:00:03"
 $tars = "00:00:00:00:0f;TAPE0f"
 $o.SetInitiator($init)
-$o.SetTargets($tars)
+$o.SetTarget($tars)
 
 $o.RemoveZones()

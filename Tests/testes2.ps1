@@ -44,7 +44,7 @@ c0:00:00:00:00:00:00:01
 c0:00:00:00:00:00:00:02
 "@
 
-$targets = Get-Content .\tape.txt
+$targets = Get-Content .\tapes.txt
 
 $script.SetInitiator($initiators)
 $script.SetTarget($targets)

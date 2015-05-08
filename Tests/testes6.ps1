@@ -22,7 +22,7 @@ b0:00:00:00:00:00:01:03;TAPE03
 "@
 
 $script.SetInitiator($initiators)
-$script.SetTargets($targets)
+$script.SetTarget($targets)
 
 $script.RemoveZones() | Set-Content -Path .\teste3.txt -Encoding UTF8
 
@@ -36,7 +36,7 @@ $script.ClearPwwns()
 
 $file = Get-Content -Path .\tapes.txt -Encoding UTF8
 $file = [string]::Join([Environment]::NewLine, $file)
-$script.SetTargets($file)
+$script.SetTarget($file)
 
 $file = Get-Content -Path .\initiator.txt -Encoding UTF8
 $file = [string]::Join([Environment]::NewLine, $file)
